@@ -22,12 +22,13 @@ struct ContentView: View {
                     Image("gallery (2)")
                         .resizable()
                         .frame(width:70, height:70)
+                        .padding(5)
                     Text("Photo \nMatching")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 150)
+                        .frame(width: 180, alignment: .leading)
                 }
             }
             .padding()
@@ -44,12 +45,13 @@ struct ContentView: View {
                     Image("calendar (2)")
                         .resizable()
                         .frame(width:70, height:70)
-                    Text("Life In \nOrder")
+                        .padding(5)
+                    Text("Timeline: \nLife In Order")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 150)
+                        .frame(width: 180, alignment: .leading)
                 }
             }
             .padding()
@@ -65,12 +67,13 @@ struct ContentView: View {
                     Image("location-pin (1)")
                         .resizable()
                         .frame(width:70, height:70)
+                        .padding(5)
                     Text("Name \nThat Place")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 150)
+                        .frame(width: 180, alignment: .leading)
                 }
             }
             .padding()
@@ -86,12 +89,13 @@ struct ContentView: View {
                     Image("to-do-list")
                         .resizable()
                         .frame(width:70, height:70)
-                    Text("To-Do \nList")
+                        .padding(5)
+                    Text("To-Do List \n& Reminders")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 150)
+                        .frame(width: 180, alignment: .leading)
                 }
             }
             .padding()
@@ -107,12 +111,13 @@ struct ContentView: View {
                     Image("user (1)")
                         .resizable()
                         .frame(width:70, height:70)
+                        .padding(5)
                     Text("Emergency Contacts")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 150)
+                        .frame(width: 180, alignment: .leading)
                 }
             }
             .padding()
