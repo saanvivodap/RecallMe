@@ -4,134 +4,50 @@
 //
 //  Created by Saanvi on 7/28/25.
 //
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name: String = ""
+    
     var body: some View {
         let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
-        VStack {
-            Text("Recall Me")
-                .font(.title)
-                .fontWeight(.bold)
-            
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } label: {
-                HStack{
-                    Image("gallery (2)")
-                        .resizable()
-                        .frame(width:70, height:70)
-                        .padding(5)
-                    Text("Photo \nMatching")
+        let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
+        NavigationStack {
+            ZStack{
+                Color(navyBlue).ignoresSafeArea()
+                RoundedRectangle(cornerRadius: 50)
+                    .fill(Color.white)
+                    .padding(30)
+                VStack{
+                    Text("Welcome to RecallMe!")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 180, alignment: .leading)
-                }
-            }
-            .padding()
-            .background(navyBlue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-            
-            
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } label: {
-                HStack{
-                    Image("calendar (2)")
-                        .resizable()
-                        .frame(width:70, height:70)
+                        .foregroundColor(navyBlue)
                         .padding(5)
-                    Text("Timeline: \nLife In Order")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 180, alignment: .leading)
-                }
-            }
-            .padding()
-            .background(navyBlue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-            
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } label: {
-                HStack{
-                    Image("location-pin (1)")
-                        .resizable()
-                        .frame(width:70, height:70)
+                    Text("What is your name?")
+                        .font(.title3)
+                    TextField("name", text: $name)
+                        .multilineTextAlignment(.center)
+                        .border(Color.gray, width:1)
+                        .font(.title2)
+                        .frame(width: 300)
                         .padding(5)
-                    Text("Name \nThat Place")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 180, alignment: .leading)
+                    
+                    NavigationLink(destination: Home(name: name)) {
+                        Text("Next")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .navigationBarHidden(true)
+                    }
+                    
+                    
+                    
                 }
             }
-            .padding()
-            .background(navyBlue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-            
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } label: {
-                HStack{
-                    Image("to-do-list")
-                        .resizable()
-                        .frame(width:70, height:70)
-                        .padding(5)
-                    Text("To-Do List \n& Reminders")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 180, alignment: .leading)
-                }
-            }
-            .padding()
-            .background(navyBlue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-            
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            } label: {
-                HStack{
-                    Image("user (1)")
-                        .resizable()
-                        .frame(width:70, height:70)
-                        .padding(5)
-                    Text("Emergency Contacts")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 180, alignment: .leading)
-                }
-            }
-            .padding()
-            .background(navyBlue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-
-            
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+
