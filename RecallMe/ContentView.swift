@@ -11,7 +11,8 @@ struct ContentView: View {
     
     var body: some View {
         let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
-        let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
+        //let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
+        let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
         NavigationStack {
             ZStack{
                 Color(navyBlue).ignoresSafeArea()
@@ -19,10 +20,15 @@ struct ContentView: View {
                     .fill(Color.white)
                     .padding(30)
                 VStack{
+                    
                     Text("Welcome to RecallMe!")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(navyBlue)
+                        .padding(5)
+                    Image("brain")
+                        .resizable()
+                        .frame(width:100, height:100)
                         .padding(5)
                     Text("What is your name?")
                         .font(.title3)
@@ -33,11 +39,19 @@ struct ContentView: View {
                         .frame(width: 300)
                         .padding(5)
                     
-                    NavigationLink(destination: Home(name: name)) {
+                    NavigationLink(destination: Home()) {
                         Text("Next")
-                            .navigationBarTitleDisplayMode(.inline)
-                            .navigationBarHidden(true)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .multilineTextAlignment(.center)
                     }
+                        .padding()
+                        .background(LinearGradient(gradient: Gradient(colors: [navyBlue, lightBlue]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                        .frame(width: 300)
+                        
                     
                     
                     
