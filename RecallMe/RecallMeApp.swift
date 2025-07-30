@@ -11,7 +11,7 @@ import SwiftUI
 struct RecallMeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContactListView()
                 .modelContainer(for: ContactItem.self)
         }
     }
