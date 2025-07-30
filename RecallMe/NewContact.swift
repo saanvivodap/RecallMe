@@ -1,15 +1,12 @@
-//
-//  NewContact.swift
-//  RecallMe
-//
-//  Created by Tiger on 7/30/25.
-//
-
+// NewContact.swift
 import SwiftUI
+import SwiftData
 
 struct NewContact: View {
   @Binding var showNewContact: Bool
-  @Bindable var contactItem: ContactItem
+  @State private var name: String = ""
+  @State private var number: String = ""
+  @State private var isImportant: Bool = false
   @Environment(\.modelContext) var modelContext
 
   var body: some View {
@@ -18,20 +15,20 @@ struct NewContact: View {
         .font(.title)
         .fontWeight(.bold)
 
-      TextField("Enter their name here...", text: $contactItem.name, axis: .vertical)
+      TextField("Enter their name here...", text: $name, axis: .vertical)
         .padding()
         .background(Color(.systemGroupedBackground))
         .cornerRadius(15)
         .padding(.horizontal)
 
-      TextField("Enter their number here...", text: $contactItem.number, axis: .vertical)
+      TextField("Enter their number here...", text: $number, axis: .vertical)
         .keyboardType(.phonePad)
         .padding()
         .background(Color(.systemGroupedBackground))
         .cornerRadius(15)
         .padding(.horizontal)
 
-      Toggle("Is it important?", isOn: $contactItem.isImportant)
+      Toggle("Is it important?", isOn: $isImportant)
         .padding(.horizontal)
 
       Button {
@@ -52,11 +49,11 @@ struct NewContact: View {
   }
 
   func addContact() {
-    let contact = ContactItem(name: contactItem.name, number: contactItem.number, isImportant: contactItem.isImportant)
+    let contact = ContactItem(name: name, number: number, isImportant: isImportant)
     modelContext.insert(contact)
   }
 }
 
 #Preview {
-  NewContact(showNewContact: .constant(false), contactItem: ContactItem(name: "", number: "", isImportant: false))
+  NewContact(showNewContact: .constant(false))
 }
