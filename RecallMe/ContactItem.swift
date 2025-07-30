@@ -1,10 +1,3 @@
-//
-//  ContactItem.swift
-//  RecallMe
-//
-//  Created by Tiger on 7/30/25.
-//
-
 import Foundation
 import SwiftData
 
