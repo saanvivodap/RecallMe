@@ -36,21 +36,23 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .border(Color.gray, width:1)
                         .font(.title2)
-                        .frame(width: 300)
+                        .frame(width: 280)
                         .padding(5)
                     
-                    NavigationLink(destination: Home()) {
+                    NavigationLink(destination: Home(name: name)) {
                         Text("Next")
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.center)
+                            .navigationBarBackButtonHidden(true)
+                            .frame(width: 250)
                     }
                         .padding()
                         .background(LinearGradient(gradient: Gradient(colors: [navyBlue, lightBlue]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
                         .cornerRadius(10)
                         .shadow(radius: 5)
-                        .frame(width: 300)
+                        
                         
                     
                     

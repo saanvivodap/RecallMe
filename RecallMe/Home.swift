@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Home: View {
-@State private var name: String = ""
+    let name: String
     
     var body: some View {
         let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
@@ -149,8 +149,9 @@ struct Home: View {
             
         }
         .padding()
+        .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {
-    Home()
+    Home(name: "")
 }
