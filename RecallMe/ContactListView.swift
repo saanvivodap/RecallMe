@@ -16,13 +16,13 @@ struct ContactListView: View {
 
   var body: some View {
     VStack {
-      HStack {
+      HStack{
         Text("Contacts")
-          .font(.system(size: 40))
+          .font(.system(size:40))
           .fontWeight(.black)
         Spacer()
         Button {
-          withAnimation {
+          withAnimation{
             showNewContact = true
           }
         } label: {
@@ -37,29 +37,18 @@ struct ContactListView: View {
         ForEach(contacts) { contact in
           VStack(alignment: .leading) {
             if contact.isImportant {
-              Text("❗" + contact.name)
-                .font(.headline)
+              Text("❗" + contact.name).font(.headline)
             } else {
-              Text(contact.name)
-                .font(.headline)
+              Text(contact.name).font(.headline)
             }
-            Text(contact.number)
-              .font(.subheadline)
-              .foregroundColor(.gray)
+            Text(contact.number).font(.subheadline).foregroundColor(.gray)
           }
         }
-        .onDelete(perform: deleteContact)
       }
-    }
-    .sheet(isPresented: $showNewContact) {
-      NewContact(showNewContact: $showNewContact)
-    }
-  }
 
-  func deleteContact(at offsets: IndexSet) {
-    for offset in offsets {
-      let contact = contacts[offset]
-      modelContext.delete(contact)
+      if showNewContact {
+        NewContact(showNewContact: $showNewContact, contactItem: ContactItem(name: "", number: "", isImportant: false))
+      }
     }
   }
 }
