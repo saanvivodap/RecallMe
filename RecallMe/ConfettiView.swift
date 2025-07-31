@@ -18,8 +18,9 @@ struct ConfettiView: View {
       Text("You matched everyone perfectly!")
         .font(.title2)
         .padding(.top, 10)
+        .multilineTextAlignment(.center)
     }
-    .navigationBarBackButtonHidden(true)
+    
   }
 }
 

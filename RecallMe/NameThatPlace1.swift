@@ -1,16 +1,17 @@
 //
-//  NameThatPlace.swift
+//  NameThatPlace1.swift
 //  RecallMe
 //
-//  Created by Saanvi on 7/30/25.
+//  Created by Saanvi on 7/31/25.
 //
 
 import SwiftUI
 
-struct NameThatPlace: View {
+struct NameThatPlace1: View {
     let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
     let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
     let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
+    let customGray = Color(red:0.9333333333333333, green:0.9333333333333333, blue:0.9333333333333333)
     
     var body: some View {
         NavigationStack{
@@ -20,15 +21,15 @@ struct NameThatPlace: View {
             .multilineTextAlignment(.center)
             
             
-            Image("home")
+            Image("hospital")
                 .resizable()
                 .frame(width:280, height: 380)
                 .cornerRadius(10)
         
-            NavigationLink(destination: PlaceCorrect1()) {
+            NavigationLink(destination: PlaceIncorrect2()) {
                 HStack{
                     
-                    Text("My Home")
+                    Text("School")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
@@ -43,10 +44,10 @@ struct NameThatPlace: View {
             .fontWeight(.bold)
             .shadow(radius: 15)
             
-            NavigationLink(destination: PlaceIncorrect1()) {
+            NavigationLink(destination: PlaceCorrect2()) {
                 HStack{
                     
-                    Text("My Friend's Home")
+                    Text("Hospital")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
@@ -61,13 +62,10 @@ struct NameThatPlace: View {
             .fontWeight(.bold)
             .shadow(radius: 15)
         }
-        
+        .navigationBarBackButtonHidden(true)
     }
-    
-    }
-    
-
+}
 
 #Preview {
-    NameThatPlace()
+    NameThatPlace1()
 }

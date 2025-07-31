@@ -52,7 +52,7 @@ struct PhotoMatching: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
-                    .navigationBarBackButtonHidden(true)
+                    
                     .frame(width: 250)
             }
             .padding()
