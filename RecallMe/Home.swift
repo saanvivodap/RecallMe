@@ -94,7 +94,7 @@ struct Home: View {
                     .fontWeight(.bold)
                     .shadow(radius: 15)
                     
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: MainView()) {
                         HStack{
                             Image("to-do-list")
                                 .resizable()

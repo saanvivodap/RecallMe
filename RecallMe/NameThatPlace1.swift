@@ -62,7 +62,7 @@ struct NameThatPlace1: View {
             .fontWeight(.bold)
             .shadow(radius: 15)
         }
-        .navigationBarBackButtonHidden(true)
+       
     }
 }
 
