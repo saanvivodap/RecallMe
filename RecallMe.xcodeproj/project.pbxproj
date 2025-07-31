@@ -6,7 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-
+/* Begin PBXFileReference section */
 		D5DED5A62E381EE800586B9C /* RecallMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecallMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,7 +32,6 @@
 		D5DED59D2E381EE800586B9C = {
 			isa = PBXGroup;
 			children = (
-
 				D5DED5A82E381EE800586B9C /* RecallMe */,
 				D5DED5A72E381EE800586B9C /* Products */,
 			);
@@ -120,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
