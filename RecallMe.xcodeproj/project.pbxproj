@@ -6,7 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD1953F32E3BDA4800A1B33B /* To-Do List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F22E3BDA4700A1B33B /* To-Do List.swift */; };
+		BD1953F52E3BDABB00A1B33B /* NewToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F42E3BDABB00A1B33B /* NewToDo.swift */; };
+		BD1953F72E3BDB7400A1B33B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F62E3BDB7400A1B33B /* MainView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		BD1953F22E3BDA4700A1B33B /* To-Do List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "To-Do List.swift"; sourceTree = "<group>"; };
+		BD1953F42E3BDABB00A1B33B /* NewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDo.swift; sourceTree = "<group>"; };
+		BD1953F62E3BDB7400A1B33B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D5DED5A62E381EE800586B9C /* RecallMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecallMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +41,9 @@
 		D5DED59D2E381EE800586B9C = {
 			isa = PBXGroup;
 			children = (
+				BD1953F62E3BDB7400A1B33B /* MainView.swift */,
+				BD1953F42E3BDABB00A1B33B /* NewToDo.swift */,
+				BD1953F22E3BDA4700A1B33B /* To-Do List.swift */,
 				D5DED5A82E381EE800586B9C /* RecallMe */,
 				D5DED5A72E381EE800586B9C /* Products */,
 			);
@@ -119,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1953F52E3BDABB00A1B33B /* NewToDo.swift in Sources */,
+				BD1953F72E3BDB7400A1B33B /* MainView.swift in Sources */,
+				BD1953F32E3BDA4800A1B33B /* To-Do List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
