@@ -37,6 +37,7 @@ struct NewToDo: View {
         let toDo = ToDoItem(title: toDoItem.title, isImportant: toDoItem.isImportant)
         modelContext.insert(toDo)
     }
+    
 }
     
     #Preview {
