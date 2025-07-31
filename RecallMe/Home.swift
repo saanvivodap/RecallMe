@@ -22,7 +22,7 @@ struct Home: View {
                         .fontWeight(.black)
                         .multilineTextAlignment(.center)
                         .padding(5)
-                    Text("Select a game to get started:")
+                    Text("Select a tool to get started:")
                         .multilineTextAlignment(.center)
                 }
                 .padding(20)
@@ -90,13 +90,13 @@ struct Home: View {
                 .fontWeight(.bold)
                 .shadow(radius: 15)
                 
-                NavigationLink(destination: ToDoList()) {
-                    HStack{
-                        Image("to-do-list")
-                            .resizable()
-                            .frame(width:60, height:60)
-                            .padding(5)
-                        Text("To-Do List \n& Reminders")
+                NavigationLink(destination: ContentView()) {
+                   HStack{
+                       Image("to-do-list")
+                           .resizable()
+                           .frame(width:60, height:60)
+                           .padding(5)
+                       Text("To-Do List \n& Reminders")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
