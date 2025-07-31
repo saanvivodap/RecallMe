@@ -14,12 +14,7 @@ struct PlaceCorrect1: View {
         let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
         let customGray = Color(red:0.9333333333333333, green:0.9333333333333333, blue:0.9333333333333333)
         NavigationStack {
-            ZStack{
-                Color(navyBlue).ignoresSafeArea()
-                RoundedRectangle(cornerRadius: 50)
-                    .fill(Color.white)
-                    .padding(30)
-                    .shadow(radius: 30)
+            
                 VStack {
                     Text("🎉 Correct! 🎉")
                         .font(.largeTitle)
@@ -48,8 +43,8 @@ struct PlaceCorrect1: View {
                     .fontWeight(.bold)
                     .shadow(radius: 15)
                 }
-                .navigationBarBackButtonHidden(true)
-            }
+                
+            
         }
       }
     }

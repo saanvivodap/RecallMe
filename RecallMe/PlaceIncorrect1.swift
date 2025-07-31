@@ -15,12 +15,7 @@ struct PlaceIncorrect1: View {
     
     var body: some View {
         NavigationStack {
-            ZStack{
-                Color(navyBlue).ignoresSafeArea()
-                RoundedRectangle(cornerRadius: 50)
-                    .fill(Color.white)
-                    .padding(30)
-                    .shadow(radius: 30)
+            
                 VStack {
                     Text("Incorrect!")
                         .font(.largeTitle)
@@ -47,12 +42,12 @@ struct PlaceIncorrect1: View {
                     .padding()
                     .background(LinearGradient(gradient: Gradient(colors: [navyBlue, lightBlue]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
                     .cornerRadius(10)
-                    .font(.title)
+                    .font(.title3)
                     .fontWeight(.bold)
                     .shadow(radius: 15)
                 }
-            }
-            .navigationBarBackButtonHidden(true)
+            
+            
         }
     }
 }
