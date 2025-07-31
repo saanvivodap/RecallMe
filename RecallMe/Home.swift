@@ -135,7 +135,7 @@ struct Home: View {
                 .modelContainer(for: ContactItem.self)
             }
             .padding()
-            .navigationBarBackButtonHidden(true)
+            
         }
     }
 }
