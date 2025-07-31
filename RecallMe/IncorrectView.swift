@@ -1,5 +1,5 @@
 //
-//  ConfettiView.swift
+//  IncorrectView.swift
 //  RecallMe
 //
 //  Created by Tiger on 7/31/25.
@@ -7,17 +7,15 @@
 
 import SwiftUI
 
-import SwiftUI
-
-struct ConfettiView: View {
+struct IncorrectView: View {
   var body: some View {
-    VStack {
-      Text("🎉 Correct! 🎉")
+    VStack(spacing: 16) {
+      Text("❌ Incorrect ❌")
         .font(.largeTitle)
         .fontWeight(.heavy)
-        .foregroundColor(.green)
+        .foregroundColor(.red)
 
-      Text("You matched everyone perfectly!")
+      Text("Oops! Try matching again.")
         .font(.title2)
         .padding(.top, 10)
 
@@ -26,8 +24,6 @@ struct ConfettiView: View {
     }
   }
 
-
-
 #Preview {
-    ConfettiView()
+    IncorrectView()
 }
