@@ -44,6 +44,7 @@ struct ContactListView: View {
         .onDelete(perform: deleteContact)
       }
     }
+    
     .sheet(isPresented: $showNewContact) {
       NewContact(showNewContact: $showNewContact)
     }
@@ -54,8 +55,10 @@ struct ContactListView: View {
       let contact = contacts[offset]
       modelContext.delete(contact)
     }
+      
   }
 }
+
 
 #Preview {
   ContactListView()

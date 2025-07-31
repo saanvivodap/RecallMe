@@ -20,10 +20,9 @@ struct ConfettiView: View {
       Text("You matched everyone perfectly!")
         .font(.title2)
         .padding(.top, 10)
-
-      .padding(.top, 20)
+        .multilineTextAlignment(.center)
     }
-    }
+  }
   }
 
 

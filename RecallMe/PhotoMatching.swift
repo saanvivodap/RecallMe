@@ -47,10 +47,17 @@ struct PhotoMatching: View {
                 .cornerRadius(8)
             }
           }
-        }
-
-        Button(action: checkAnswers) {
-          Text("Submit")
+                                    }                              
+            
+            Button(action: checkAnswers) {
+                Text("Check")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    
+                    .frame(width: 250)
+            }
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.blue)
