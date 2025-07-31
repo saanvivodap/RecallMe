@@ -1,5 +1,5 @@
 //
-//  PlaceCorrect1.swift
+//  PlaceCorrect2.swift
 //  RecallMe
 //
 //  Created by Saanvi on 7/31/25.
@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct PlaceCorrect1: View {
+struct PlaceCorrect2: View {
+    let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
+    let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
+    let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
+    let customGray = Color(red:0.9333333333333333, green:0.9333333333333333, blue:0.9333333333333333)
     var body: some View {
-        let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
-        let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
-        let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
-        let customGray = Color(red:0.9333333333333333, green:0.9333333333333333, blue:0.9333333333333333)
+        
         NavigationStack {
             
                 VStack {
@@ -20,7 +21,7 @@ struct PlaceCorrect1: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(.green)
-                    Text("This location is your home!")
+                    Text("This location is the hospital!")
                         .font(.title2)
                         .padding(.top, 10)
                         .multilineTextAlignment(.center)
@@ -42,14 +43,12 @@ struct PlaceCorrect1: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .shadow(radius: 15)
-                }
                 
-            
+                
+            }
         }
-      }
     }
-
-
+}
 #Preview {
-    PlaceCorrect1()
+    PlaceCorrect2()
 }

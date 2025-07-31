@@ -6,12 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BD19540F2E3BFED700A1B33B /* LifeInOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD19540E2E3BFED700A1B33B /* LifeInOrderView.swift */; };
-/* End PBXBuildFile section */
 
-/* Begin PBXFileReference section */
-		BD19540E2E3BFED700A1B33B /* LifeInOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeInOrderView.swift; sourceTree = "<group>"; };
 		D5DED5A62E381EE800586B9C /* RecallMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecallMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,7 +32,7 @@
 		D5DED59D2E381EE800586B9C = {
 			isa = PBXGroup;
 			children = (
-				BD19540E2E3BFED700A1B33B /* LifeInOrderView.swift */,
+
 				D5DED5A82E381EE800586B9C /* RecallMe */,
 				D5DED5A72E381EE800586B9C /* Products */,
 			);
@@ -125,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD19540F2E3BFED700A1B33B /* LifeInOrderView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
