@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct MainView: View {
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var content
     @State private var showNewTask = false
     @Query var ToDos: [ToDoItem]
     
