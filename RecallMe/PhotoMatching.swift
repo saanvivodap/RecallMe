@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct PhotoMatching: View {
+    let navyBlue = Color(red: 0, green: 0.18823529411764706, blue: 0.3764705882352941)
+    let skyBlue = Color(red: 0.058823529411764705, green: 0.5254901960784314, blue: 0.8313725490196079)
+    let lightBlue = Color(red:0.023529411764705882, green:0.3607843137254902, blue:0.615686274509804)
+    let customGray = Color(red:0.9333333333333333, green:0.9333333333333333, blue:0.9333333333333333)
+    
     @State private var selections: [String] = Array(repeating: "", count: 4)
     @State private var navigateToConfetti = false
     @State private var navigateToIncorrect = false
@@ -18,10 +23,12 @@ struct PhotoMatching: View {
     
     var body: some View {
         NavigationStack {
-            VStack(spacing: 30) {
+            VStack(spacing: 20) {
                 Text("Match the Family Members!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                    .font(.system(size: 40))
+                    .fontWeight(.black)
+                    .multilineTextAlignment(.center)
+
                 
                 ForEach(0..<4, id: \ .self) { index in
                     HStack(spacing: 20) {
@@ -55,14 +62,14 @@ struct PhotoMatching: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
-                    
-                        .frame(width: 250)
+                        .frame(width: 250, alignment: .center)
                 }
                 .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(12)
+                .background(LinearGradient(gradient: Gradient(colors: [navyBlue, lightBlue]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+                .cornerRadius(10)
+                .font(.title)
+                .fontWeight(.bold)
+                .shadow(radius: 15)
             }
             .padding(.top)
             

@@ -15,12 +15,7 @@ struct PlaceCorrect2: View {
     var body: some View {
         
         NavigationStack {
-            ZStack{
-                Color(navyBlue).ignoresSafeArea()
-                RoundedRectangle(cornerRadius: 50)
-                    .fill(Color.white)
-                    .padding(30)
-                    .shadow(radius: 30)
+            
                 VStack {
                     Text("🎉 Correct! 🎉")
                         .font(.largeTitle)
@@ -48,8 +43,8 @@ struct PlaceCorrect2: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .shadow(radius: 15)
-                }
-                .navigationBarBackButtonHidden(true)
+                
+                
             }
         }
     }
