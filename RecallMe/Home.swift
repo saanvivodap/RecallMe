@@ -18,17 +18,16 @@ struct Home: View {
             VStack {
                 VStack{
                     Text("Welcome, \(name)!")
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.system(size: 40))
+                        .fontWeight(.black)
                         .multilineTextAlignment(.center)
                         .padding(5)
-                    Text("Select a game to get started:")
+                    Text("Select a tool to get started:")
                         .multilineTextAlignment(.center)
                 }
                 .padding(20)
-                Button {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                } label: {
+                
+                NavigationLink(destination: PhotoMatching()) {
                     HStack{
                         Image("gallery (2)")
                             .resizable()
@@ -40,23 +39,16 @@ struct Home: View {
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.leading)
                             .frame(width: 200, alignment: .leading)
-                        
                     }
                 }
                 .padding()
-                //.background(navyBlue)
                 .background(LinearGradient(gradient: Gradient(colors: [navyBlue, lightBlue]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
                 .cornerRadius(10)
                 .font(.title)
                 .fontWeight(.bold)
-                .shadow(radius: 5)
+                .shadow(radius: 15)
                 
-                
-                
-                
-                Button {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                } label: {
+                NavigationLink(destination: ContentView()) {
                     HStack{
                         Image("calendar (2)")
                             .resizable()
@@ -75,11 +67,9 @@ struct Home: View {
                 .cornerRadius(10)
                 .font(.title)
                 .fontWeight(.bold)
-                .shadow(radius: 5)
+                .shadow(radius: 15)
                 
-                Button {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                } label: {
+                NavigationLink(destination: NameThatPlace()) {
                     HStack{
                         Image("location-pin (1)")
                             .resizable()
@@ -98,17 +88,15 @@ struct Home: View {
                 .cornerRadius(10)
                 .font(.title)
                 .fontWeight(.bold)
-                .shadow(radius: 5)
+                .shadow(radius: 15)
                 
-                Button {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                } label: {
-                    HStack{
-                        Image("to-do-list")
-                            .resizable()
-                            .frame(width:60, height:60)
-                            .padding(5)
-                        Text("To-Do List \n& Reminders")
+                NavigationLink(destination: ContentView()) {
+                   HStack{
+                       Image("to-do-list")
+                           .resizable()
+                           .frame(width:60, height:60)
+                           .padding(5)
+                       Text("To-Do List \n& Reminders")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
@@ -121,7 +109,7 @@ struct Home: View {
                 .cornerRadius(10)
                 .font(.title)
                 .fontWeight(.bold)
-                .shadow(radius: 5)
+                .shadow(radius: 15)
                 
                 NavigationLink(destination: ContactListView()) {
                     HStack{
@@ -142,9 +130,9 @@ struct Home: View {
                 .cornerRadius(10)
                 .font(.title)
                 .fontWeight(.bold)
-                .shadow(radius: 5)
+                .shadow(radius: 15)
                 
-                
+                .modelContainer(for: ContactItem.self)
             }
             .padding()
             .navigationBarBackButtonHidden(true)
