@@ -19,13 +19,17 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 50)
                     .fill(Color.white)
                     .padding(30)
+                    .shadow(radius: 30)
                 VStack{
                     
                     Text("Welcome to RecallMe!")
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.system(size: 40))
+                        .fontWeight(.black)
                         .foregroundColor(navyBlue)
                         .padding(5)
+                        .multilineTextAlignment(.center)
+                        
+                    
                     Image("brain")
                         .resizable()
                         .frame(width:100, height:100)
@@ -53,10 +57,6 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .shadow(radius: 5)
                         
-                        
-                    
-                    
-                    
                 }
             }
         }
