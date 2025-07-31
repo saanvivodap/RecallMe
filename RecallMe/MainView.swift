@@ -29,7 +29,6 @@ struct MainView: View {
                         .font(.title)
                         .fontWeight(.bold)
                 }
-                
             }
         }
         .padding()
@@ -41,17 +40,26 @@ struct MainView: View {
                 } else{
                     Text(toDoItem.title)
                 }
+                
             }
+            .onDelete(perform: deleteItem)
         }
         if showNewTask {
             NewToDo(toDoItem: ToDoItem(title: "", isImportant: false), showNewTask: $showNewTask)
+        }
     }
-    
+        func deleteItem(at offsets: IndexSet) {
+            for offset in offsets {
+                let ToDoItem = ToDos[offset]
+                context.delete(ToDoItem)
+                
+            }
+            
+        }
     }
-}
 
-#Preview {
-    ContentView()
-        .modelContainer(for: ToDoItem.self)
-}
+    #Preview {
+        ContentView()
+            .modelContainer(for: ToDoItem.self)
+    }
 
