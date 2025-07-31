@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ConfettiView: View {
   var body: some View {
     VStack {
@@ -20,9 +22,10 @@ struct ConfettiView: View {
         .padding(.top, 10)
         .multilineTextAlignment(.center)
     }
-    
   }
-}
+  }
+
+
 
 #Preview {
     ConfettiView()
