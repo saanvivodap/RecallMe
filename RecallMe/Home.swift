@@ -21,7 +21,7 @@ struct Home: View {
                     Color(customGray).ignoresSafeArea()
                 VStack {
                     VStack{
-                        Text("Welcome, \(name)!")
+                        Text("Welcome, \n\(name)!")
                             .font(.system(size: 40))
                             .fontWeight(.black)
                             .multilineTextAlignment(.center)
