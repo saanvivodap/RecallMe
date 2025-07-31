@@ -10,12 +10,16 @@
 		BD1953F32E3BDA4800A1B33B /* To-Do List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F22E3BDA4700A1B33B /* To-Do List.swift */; };
 		BD1953F52E3BDABB00A1B33B /* NewToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F42E3BDABB00A1B33B /* NewToDo.swift */; };
 		BD1953F72E3BDB7400A1B33B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F62E3BDB7400A1B33B /* MainView.swift */; };
+		BD1953F92E3BDCE800A1B33B /* To_Do_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953F82E3BDCE800A1B33B /* To_Do_ListApp.swift */; };
+		BD1953FB2E3BE42100A1B33B /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1953FA2E3BE42100A1B33B /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD1953F22E3BDA4700A1B33B /* To-Do List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "To-Do List.swift"; sourceTree = "<group>"; };
 		BD1953F42E3BDABB00A1B33B /* NewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDo.swift; sourceTree = "<group>"; };
 		BD1953F62E3BDB7400A1B33B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BD1953F82E3BDCE800A1B33B /* To_Do_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_ListApp.swift; sourceTree = "<group>"; };
+		BD1953FA2E3BE42100A1B33B /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		D5DED5A62E381EE800586B9C /* RecallMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecallMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -41,6 +45,8 @@
 		D5DED59D2E381EE800586B9C = {
 			isa = PBXGroup;
 			children = (
+				BD1953FA2E3BE42100A1B33B /* ToDoItem.swift */,
+				BD1953F82E3BDCE800A1B33B /* To_Do_ListApp.swift */,
 				BD1953F62E3BDB7400A1B33B /* MainView.swift */,
 				BD1953F42E3BDABB00A1B33B /* NewToDo.swift */,
 				BD1953F22E3BDA4700A1B33B /* To-Do List.swift */,
@@ -132,8 +138,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1953F52E3BDABB00A1B33B /* NewToDo.swift in Sources */,
+				BD1953FB2E3BE42100A1B33B /* ToDoItem.swift in Sources */,
 				BD1953F72E3BDB7400A1B33B /* MainView.swift in Sources */,
 				BD1953F32E3BDA4800A1B33B /* To-Do List.swift in Sources */,
+				BD1953F92E3BDCE800A1B33B /* To_Do_ListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
